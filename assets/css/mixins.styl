@@ -1,0 +1,94 @@
+use("./plugins/has-own-property.js")
+
+/**
+ * getter
+ */
+get-deep-merge($a, $b)
+  $c = merge({}, $a)
+
+  for $key in $b
+    if has-own-property($b, $key)
+      if has-own-property($a, $key) && (typeof($a[$key]) == "object" && typeof($b[$key]) == "object")
+        $c[$key] = get-deep-merge($a[$key], $b[$key])
+      else
+        $c[$key] = $b[$key]
+
+  return $c
+
+get-add-unit($val)
+  unit($val) ? $val : unit($val, "px")
+
+get-percent-size($size, $base-size)
+  ($size / $base-size * 100) %
+
+/**
+ * @example
+ *   get-img-size('../../htdocs/images/sample.png') // image
+ *   get-img-size('images/sample/a.png') // sprite
+ */
+get-img-size($imgpath)
+  if match("^.+(htdocs).+$", $imgpath)
+    $img-size = image-size($imgpath)
+    $hash = {
+      width: $img-size[0],
+      height: $img-size[1]
+    }
+    return $hash
+  else
+    $hash = {
+      width: sprite-hash[$imgpath].width,
+      height: sprite-hash[$imgpath].height
+    }
+    return $hash
+
+/**
+ * size & position
+ */
+size($width, $height = $width)
+  width get-add-unit($width)
+  height get-add-unit($height)
+
+min-size($width, $height = $width)
+  min-width get-add-unit($width)
+  min-height get-add-unit($height)
+
+max-size($width, $height = $width)
+  max-width get-add-unit($$height)
+
+/**
+ * @example
+ *   centering() // translate
+ *   centering(500) // margin
+ *   centering(500, 200) // margin
+ */
+centering($width = null, $height = $width)
+  if $width
+    margin ($width / -2) px 0 0 ($width / -2) px
+  else
+    transform translateX(-50%) translateY(-50%)
+
+  absolute top 50% left 50%
+
+/**
+ * @example
+ *   aspect-ratio('../../htdocs/images/sample.png') // image
+ *   aspect-ratio('images/sample/a.png') // sprite
+ *   aspect-ratio(500, 300) // size
+ */
+aspect-ratio($width-or-imgpath, $height = null)
+  if typeof($width-or-imgpath) == "string"
+    $img-size = get-img-size($width-or-imgpath)
+    $width = $img-size.width
+    $height = $img-size.height
+  else
+    $width = $width-or-imgpath
+
+  position relative
+
+  &::before
+    display block
+    padding-top get-percent-size($height, $width)
+    content ""
+
+  > *
+    position absolute
