@@ -4,7 +4,7 @@
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ npm install
 
@@ -17,6 +17,9 @@ $ npm start
 
 # generate static project
 $ npm run generate
+
+# serve with whiteroom at localhost:9999
+$ npm run whiteroom
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
