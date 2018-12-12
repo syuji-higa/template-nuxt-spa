@@ -1,14 +1,23 @@
 <template>
-  <button>{{ name }}</button>
+  <button
+    :class="{ 'is-selected': isSelected }"
+    @click="onClick()">
+    <slot>Button</slot>
+  </button>
 </template>
 
 <script>
 export default {
   props: {
-    name: {
-      type: String,
+    isSelected: {
+      type: Boolean,
       required: true,
-      default: 'Button'
+      default: false
+    }
+  },
+  methods: {
+    onClick() {
+      this.$emit('click')
     }
   }
 }
@@ -24,6 +33,7 @@ button
   cursor pointer
   transition .1s all ease-in-out
 
+  &.is-selected
   &:hover
     background-color #389
     color #fff

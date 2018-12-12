@@ -1,24 +1,35 @@
 <template>
-  <ul class="items">
-    <li
-      v-for="(item, index) in items"
-      :key="index"
-      class="item">
-      <Button
-        :name="item.name" />
-    </li>
-  </ul>
+  <div>
+    <ul class="items">
+      <li
+        v-for="(item, index) in items"
+        :key="index"
+        class="item">
+        <Button
+          :is-selected="selectedItemName === item.name"
+          @click="selectItem(item.name)">
+          {{ item.name }}
+        </Button>
+      </li>
+    </ul>
+    <SelectedItemName :is-selected="selectedItemName !== ''">
+      {{ selectedItemName || 'Not select' }}
+    </SelectedItemName>
+  </div>
 </template>
 
 <script>
 import Button from './Button.vue'
+import SelectedItemName from './SelectedItemName.vue'
 
 export default {
   components: {
-    Button
+    Button,
+    SelectedItemName
   },
   data: function() {
     return {
+      selectedItemName: '',
       items: [
         {
           name: 'Alpah'
@@ -30,6 +41,11 @@ export default {
           name: 'Charlie'
         }
       ]
+    }
+  },
+  methods: {
+    selectItem(name) {
+      this.selectedItemName = name
     }
   }
 }

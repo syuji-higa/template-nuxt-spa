@@ -2,7 +2,7 @@
   <section class="container">
     <div>
       <logo/>
-      <h1 class="title">Scaffold Nuxt SPA</h1>
+      <p class="copy">Scaffold Nuxt SPA</p>
       <Items/>
     </div>
   </section>
