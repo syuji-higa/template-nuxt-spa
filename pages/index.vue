@@ -31,7 +31,7 @@ export default {
 .logo
   margin-bottom 48px
 
-.title
+.copy
   display block
   margin-bottom 48px
   color #389

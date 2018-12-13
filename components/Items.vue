@@ -55,6 +55,7 @@ export default {
 .items
   display flex
   justify-content center
+  margin-bottom 30px
   padding 0
 
 .item
