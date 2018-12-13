@@ -31,7 +31,6 @@ module.exports = {
   */
   styleResources: {
     stylus: [
-      '~/nib/index.styl',
       './assets/css/setting.styl',
       './assets/css/easings.styl',
       './assets/css/mixins.styl'
