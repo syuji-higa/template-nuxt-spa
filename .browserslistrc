@@ -1,0 +1,5 @@
+{
+  'last 3 versions',
+  'not < 0.25%',
+  'not Android < 5'
+}
