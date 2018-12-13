@@ -1,10 +1,9 @@
 <template>
   <div>
-    <ul class="items">
+    <ul>
       <li
         v-for="(item, index) in items"
-        :key="index"
-        class="item">
+        :key="index">
         <Button
           :is-selected="selectedItemName === item.name"
           @click="selectItem(item.name)">
@@ -52,13 +51,13 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.items
+ul
   display flex
   justify-content center
   margin-bottom 30px
   padding 0
 
-.item
+li
   list-style none
 
   &:not(:last-child)
