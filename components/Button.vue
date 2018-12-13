@@ -23,7 +23,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 button
   padding 10px 15px
   border 1px solid #389

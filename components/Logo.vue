@@ -1,11 +1,11 @@
 <template>
   <div>
-    <h1 class="logo">LOGO</h1>
+    <h1>LOGO</h1>
   </div>
 </template>
 
-<style lang="stylus">
-.logo
+<style lang="stylus" scoped>
+h1
   color #389
   font-size 32px
 </style>

@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <div>
-      <logo/>
+      <logo class="logo"/>
       <p class="copy">Scaffold Nuxt SPA</p>
       <Items/>
     </div>
@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 .container
   display flex
   justify-content center

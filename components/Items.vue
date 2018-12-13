@@ -51,7 +51,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 .items
   display flex
   justify-content center
