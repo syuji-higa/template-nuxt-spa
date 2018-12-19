@@ -1,13 +1,13 @@
 <template>
-  <div class="container">
-    <div>
-      <div class="logo">
-        <TheLogo/>
-      </div>
-      <div class="menu">
-        <TheMenu/>
-      </div>
+  <div>
+    <div class="logo">
+      <TheLogo/>
+    </div>
+    <div class="container">
       <nuxt/>
+    </div>
+    <div class="menu">
+      <TheMenu/>
     </div>
   </div>
 </template>
@@ -88,8 +88,12 @@ button
   text-align center
 
 .logo
-  margin-bottom 48px
+  position fixed
+  top 40px
+  left 40px
 
 .menu
-  margin-bottom 48px
+  position fixed
+  top 40px
+  right 40px
 </style>

@@ -21,5 +21,5 @@
 
   a
     color #389
-    font-size 24px
+    font-size 18px
 </style>

@@ -6,5 +6,5 @@
 .logo
   color #389
   font-weight bold
-  font-size 50px
+  font-size 32px
 </style>
