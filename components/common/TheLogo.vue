@@ -4,7 +4,9 @@
 
 <style lang="stylus" scoped>
 .logo
-  color #389
+  padding 10px 13px
+  background-color #389
+  color #fff
   font-weight bold
   font-size 32px
 </style>

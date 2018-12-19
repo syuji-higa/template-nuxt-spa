@@ -89,11 +89,11 @@ button
 
 .logo
   position fixed
-  top 40px
-  left 40px
+  top 30px
+  left 30px
 
 .menu
   position fixed
-  top 40px
-  right 40px
+  top 45px
+  right 45px
 </style>
