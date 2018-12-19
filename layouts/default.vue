@@ -1,11 +1,27 @@
 <template>
-  <div>
-    <nuxt/>
+  <div class="container">
+    <div>
+      <div class="logo">
+        <TheLogo/>
+      </div>
+      <div class="menu">
+        <TheMenu/>
+      </div>
+      <nuxt/>
+    </div>
   </div>
 </template>
 
 <script>
-export default {}
+import TheLogo from '../components/common/TheLogo.vue'
+import TheMenu from '../components/common/TheMenu.vue'
+
+export default {
+  components: {
+    TheLogo,
+    TheMenu
+  }
+}
 </script>
 
 <style lang="stylus">
@@ -63,4 +79,17 @@ button
 .page-enter
 .page-leave-active
   opacity 0
+
+.container
+  display flex
+  justify-content center
+  align-items center
+  min-height 100vh
+  text-align center
+
+.logo
+  margin-bottom 48px
+
+.menu
+  margin-bottom 48px
 </style>
