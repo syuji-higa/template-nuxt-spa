@@ -7,6 +7,9 @@
       <li class="item">
         <nuxt-link to="/select">Select</nuxt-link>
       </li>
+      <li class="item">
+        <nuxt-link to="/dynamic">Dynamic</nuxt-link>
+      </li>
     </ul>
   </nav>
 </template>
@@ -20,6 +23,5 @@
   margin 0 10px
 
   a
-    color #389
     font-size 18px
 </style>

@@ -5,8 +5,8 @@
 <style lang="stylus" scoped>
 .logo
   padding 10px 13px
-  background-color #389
-  color #fff
+  background-color $main-color
+  color $base-color
   font-weight bold
   font-size 32px
 </style>

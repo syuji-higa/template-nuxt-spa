@@ -6,6 +6,5 @@
 
 <style lang="stylus" scoped>
 .title
-  color #389
   font-size 48px
 </style>

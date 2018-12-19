@@ -63,6 +63,9 @@ p
 a
   color $main-color
 
+  &:hover
+    opacity .8
+
 button
   padding 0
   outline 0
