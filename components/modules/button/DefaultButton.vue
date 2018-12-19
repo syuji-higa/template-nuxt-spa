@@ -28,15 +28,15 @@ export default {
 <style lang="stylus" scoped>
 .button
   padding 10px 15px
-  border 1px solid #389
+  border 1px solid $main-color
   border-radius 6px
-  color #389
+  color $main-color
   font-size 24px
   cursor pointer
   transition .1s all ease-in-out
 
   &.is-selected
   &:hover
-    background-color #389
+    background-color $main-color
     color #fff
 </style>

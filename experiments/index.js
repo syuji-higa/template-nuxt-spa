@@ -7,6 +7,11 @@ console.log = function() {
 }
 
 /**
+ * Dafault
+ */
+import '../layouts/default.vue'
+
+/**
  * Common
  */
 import TheLogo from '../components/common/TheLogo.vue'

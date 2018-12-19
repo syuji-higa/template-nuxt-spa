@@ -7,7 +7,11 @@
         class="item"
       >
         <nuxt-link
-          :to="{ path: `/dynamic/${item.id}` }"
+          :to="{
+            name: 'dynamic-id',
+            path: '/dynamic/:id',
+            params: { id: item.id }
+          }"
         >
           {{ item.id }}
         </nuxt-link>
