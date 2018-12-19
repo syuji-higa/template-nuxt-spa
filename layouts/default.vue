@@ -4,6 +4,10 @@
   </div>
 </template>
 
+<script>
+export default {}
+</script>
+
 <style lang="stylus">
 html
   background-color $base-background-color
@@ -51,4 +55,12 @@ button
 
   .is-pc &:hover
     cursor pointer
+
+.page-enter-active
+.page-leave-active
+  transition opacity .2s
+
+.page-enter
+.page-leave-active
+  opacity 0
 </style>
