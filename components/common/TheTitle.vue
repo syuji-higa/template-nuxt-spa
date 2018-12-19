@@ -1,11 +1,10 @@
 <template>
-  <div>
-    <h1>LOGO</h1>
-  </div>
+  <h1 class="title">
+    <slot>Page Title</slot>
+  </h1>
 </template>
 
 <style lang="stylus" scoped>
-h1
+.title
   color #389
-  font-size 32px
 </style>

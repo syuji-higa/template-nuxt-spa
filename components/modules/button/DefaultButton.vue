@@ -1,7 +1,9 @@
 <template>
   <button
     :class="{ 'is-selected': isSelected }"
-    @click="onClick()">
+    class="button"
+    @click="onClick"
+  >
     <slot>Button</slot>
   </button>
 </template>
@@ -24,7 +26,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-button
+.button
   padding 10px 15px
   border 1px solid #389
   border-radius 6px

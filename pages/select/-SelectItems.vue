@@ -1,14 +1,17 @@
 <template>
   <div>
-    <ul>
+    <ul class="items">
       <li
         v-for="(item, index) in items"
-        :key="index">
-        <Button
+        :key="index"
+        class="item"
+      >
+        <DefaultButton
           :is-selected="selectedItemName === item.name"
-          @click="selectItem(item.name)">
+          @click="selectItem(item.name)"
+        >
           {{ item.name }}
-        </Button>
+        </DefaultButton>
       </li>
     </ul>
     <SelectedItemName :is-selected="selectedItemName !== ''">
@@ -18,12 +21,12 @@
 </template>
 
 <script>
-import Button from './Button.vue'
-import SelectedItemName from './SelectedItemName.vue'
+import DefaultButton from '../../components/modules/button/DefaultButton.vue'
+import SelectedItemName from './-SelectedItemName.vue'
 
 export default {
   components: {
-    Button,
+    DefaultButton,
     SelectedItemName
   },
   data: function() {
@@ -51,13 +54,13 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-ul
+.items
   display flex
   justify-content center
   margin-bottom 30px
   padding 0
 
-li
+.item
   list-style none
 
   &:not(:last-child)

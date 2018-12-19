@@ -8,22 +8,27 @@
         <TheMenu/>
       </div>
       <div class="title">
-        <TheTitle>Home Page</TheTitle>
+        <TheTitle>Select Page</TheTitle>
+      </div>
+      <div class="items">
+        <SelectItems/>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import TheLogo from '../components/common/TheLogo.vue'
-import TheMenu from '../components/common/TheMenu.vue'
-import TheTitle from '../components/common/TheTitle.vue'
+import TheLogo from '../../components/common/TheLogo.vue'
+import TheMenu from '../../components/common/TheMenu.vue'
+import TheTitle from '../../components/common/TheTitle.vue'
+import SelectItems from './-SelectItems.vue'
 
 export default {
   components: {
     TheLogo,
     TheMenu,
-    TheTitle
+    TheTitle,
+    SelectItems
   }
 }
 </script>

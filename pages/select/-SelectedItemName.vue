@@ -1,7 +1,9 @@
 <template>
   <div>
     <p
-      :class="{ 'is-selected': isSelected }">
+      :class="{ 'is-selected': isSelected }"
+      class="item"
+    >
       <slot>Selected item name</slot>
     </p>
   </div>
@@ -20,7 +22,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-p
+.item
   padding 10px 20px
   border 3px solid #389
   color #eee

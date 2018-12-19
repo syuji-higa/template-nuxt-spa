@@ -6,14 +6,47 @@ console.log = function() {
   _log.apply(console, arguments)
 }
 
-import Logo from '../components/Logo.vue'
-inspect(Logo, { group: 'Logo' })
+/**
+ * Common
+ */
+import TheLogo from '../components/common/TheLogo.vue'
+inspect(TheLogo, {
+  path: 'TheLogo',
+  group: 'Common'
+})
 
-import Button from '../components/Button.vue'
-inspect(Button, { group: 'Button' })
+import TheMenu from '../components/common/TheMenu.vue'
+inspect(TheMenu, {
+  path: 'TheMenu',
+  group: 'Common'
+})
 
-import Items from '../components/Items.vue'
-inspect(Items, { group: 'Items' })
+import TheTitle from '../components/common/TheTitle.vue'
+inspect(TheTitle, {
+  path: 'TheTitle',
+  group: 'Common'
+})
 
-import SelectedItemName from '../components/SelectedItemName.vue'
-inspect(SelectedItemName, { group: 'Items' })
+/**
+ * module button
+ */
+import DefaultButton from '../components/modules/button/DefaultButton.vue'
+inspect(DefaultButton, {
+  path: 'DefaultButton',
+  group: 'Module Button'
+})
+
+/**
+ * page select
+ */
+import SelectItems from '../pages/select/-SelectItems.vue'
+inspect(SelectItems, {
+  path: 'SelectItems',
+  group: 'Page Select'
+})
+
+import SelectedItemName from '../pages/select/-SelectedItemName.vue'
+inspect(SelectedItemName, {
+  path: 'SelectedItemName',
+  group: 'Page Select'
+})
