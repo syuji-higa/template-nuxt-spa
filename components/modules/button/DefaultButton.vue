@@ -1,11 +1,10 @@
-<template>
-  <button
-    :class="{ 'is-selected': isSelected }"
+<template lang="pug">
+  button(
+    :class ="{ 'is-selected': isSelected }"
     class="button"
     @click="onClick"
-  >
-    <slot>Button</slot>
-  </button>
+  )
+    slot Button
 </template>
 
 <script>

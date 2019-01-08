@@ -1,7 +1,6 @@
-<template>
-  <h1 class="title">
-    <slot>Page Title</slot>
-  </h1>
+<template lang="pug">
+  h1.title
+    slot Page Title
 </template>
 
 <style lang="stylus" scoped>

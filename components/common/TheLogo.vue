@@ -1,5 +1,5 @@
-<template>
-  <p class="logo">Scaffold Nuxt SPA</p>
+<template lang="pug">
+  p.logo Scaffold Nuxt SPA
 </template>
 
 <style lang="stylus" scoped>

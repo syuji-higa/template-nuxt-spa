@@ -1,12 +1,7 @@
-<template>
-  <div>
-    <p
-      :class="{ 'is-selected': isSelected }"
-      class="item"
-    >
-      <slot>Selected item name</slot>
-    </p>
-  </div>
+<template lang="pug">
+  div
+    p.item(:class="{ 'is-selected': isSelected }")
+      slot Selected item name
 </template>
 
 <script>

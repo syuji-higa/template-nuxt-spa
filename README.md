@@ -18,8 +18,8 @@ $ npm start
 # generate static project
 $ npm run generate
 
-# serve with whiteroom at localhost:9999
-$ npm run whiteroom
+# serve with storybook at localhost:6006
+$ npm run storybook
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).

@@ -1,17 +1,12 @@
-<template>
-  <nav class="menu">
-    <ul class="items">
-      <li class="item">
-        <nuxt-link to="/">Home</nuxt-link>
-      </li>
-      <li class="item">
-        <nuxt-link to="/select">Select</nuxt-link>
-      </li>
-      <li class="item">
-        <nuxt-link to="/dynamic">Dynamic</nuxt-link>
-      </li>
-    </ul>
-  </nav>
+<template lang="pug">
+  nav.menu
+    ul.items
+      li.item
+        nuxt-link(to="/") Home
+      li.item
+        nuxt-link(to="/select") Select
+      li.item
+        nuxt-link(to="/dynamic") Dynamic
 </template>
 
 <style lang="stylus" scoped>

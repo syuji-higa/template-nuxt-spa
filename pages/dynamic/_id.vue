@@ -1,20 +1,24 @@
-<template>
-  <div>
-    <div class="title">
-      <TheTitle>Dynamic {{ $route.params.id }} Page</TheTitle>
-      <nuxt-link
-        class="link"
-        to="/dynamic">Back</nuxt-link>
-    </div>
-  </div>
+<template lang="pug">
+  div
+    div.title
+      TheTitle {{ title }} Page
+      nuxt-link.link(to="/dynamic") Back
 </template>
 
 <script>
-import TheTitle from '../../components/common/TheTitle.vue'
+import TheTitle from '~/components/common/TheTitle.vue'
+import headMixin from '~/mixins/headMixin.js'
 
 export default {
   components: {
     TheTitle
+  },
+  mixins: [headMixin],
+  data() {
+    return {
+      title: `Dynamic ${this.$route.params.id}`,
+      description: `Dynamic ${this.$route.params.id} Description`
+    }
   }
 }
 </script>

@@ -1,27 +1,21 @@
-<template>
-  <div>
-    <ul class="items">
-      <li
+<template lang="pug">
+  div
+    ul.items
+      li.item(
         v-for="(item, index) in items"
         :key="index"
-        class="item"
-      >
-        <DefaultButton
+      )
+        DefaultButton(
           :is-selected="selectedItemName === item.name"
           @click="selectItem(item.name)"
-        >
-          {{ item.name }}
-        </DefaultButton>
-      </li>
-    </ul>
-    <SelectedItemName :is-selected="selectedItemName !== ''">
-      {{ selectedItemName || 'Not select' }}
-    </SelectedItemName>
+        ) {{ item.name }}
+    SelectedItemName(:is-selected="selectedItemName !== ''")
+      | {{ selectedItemName || 'Not select' }}
   </div>
 </template>
 
 <script>
-import DefaultButton from '../../components/modules/button/DefaultButton.vue'
+import DefaultButton from '~/components/modules/button/DefaultButton.vue'
 import SelectedItemName from './-SelectedItemName.vue'
 
 export default {

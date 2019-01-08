@@ -1,23 +1,17 @@
-<template>
-  <div>
-    <ul class="items">
-      <li
+<template lang="pug">
+  div
+    ul.items
+      li.item(
         v-for="(item, index) in items"
         :key="index"
-        class="item"
-      >
-        <nuxt-link
-          :to="{
+      )
+        nuxt-link(
+          :to=`{
             name: 'dynamic-id',
             path: '/dynamic/:id',
             params: { id: item.id }
-          }"
-        >
-          {{ item.id }}
-        </nuxt-link>
-      </li>
-    </ul>
-  </div>
+          }`
+        ) {{ item.id }}
 </template>
 
 <script>
