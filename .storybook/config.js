@@ -1,5 +1,6 @@
 import { action } from '@storybook/addon-actions'
 import { configure } from '@storybook/vue'
+import requireContext from 'require-context.macro';
 import Vue from 'vue';
 import './global.vue'
 
@@ -15,8 +16,8 @@ Vue.component('nuxt-link', {
 })
 
 // automatically import all files ending in *.stories.js
-const reqComponents = require.context('../components', true, /.stories.js$/)
-const reqPages = require.context('../pages', true, /.stories.js$/)
+const reqComponents = requireContext('../components', true, /.stories.js$/)
+const reqPages = requireContext('../pages', true, /.stories.js$/)
 function loadStories() {
   reqComponents.keys().forEach(filename => reqComponents(filename))
   reqPages.keys().forEach(filename => reqPages(filename))

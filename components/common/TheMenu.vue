@@ -9,6 +9,10 @@
         nuxt-link(to="/dynamic") Dynamic
 </template>
 
+<script>
+export default {}
+</script>
+
 <style lang="stylus" scoped>
 .items
   display flex

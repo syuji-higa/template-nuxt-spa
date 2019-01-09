@@ -1,0 +1,8 @@
+{
+  "env": {
+    "test": {
+      "presets": ["env"],
+      "plugins": ["require-context-hook"]
+    }
+  }
+}

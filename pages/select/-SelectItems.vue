@@ -11,11 +11,10 @@
         ) {{ item.name }}
     SelectedItemName(:is-selected="selectedItemName !== ''")
       | {{ selectedItemName || 'Not select' }}
-  </div>
 </template>
 
 <script>
-import DefaultButton from '~/components/modules/button/DefaultButton.vue'
+import DefaultButton from '~/components/modules/buttons/DefaultButton.vue'
 import SelectedItemName from './-SelectedItemName.vue'
 
 export default {
