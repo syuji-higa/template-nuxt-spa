@@ -20,6 +20,9 @@ $ npm run generate
 
 # serve with storybook at localhost:6006
 $ npm run storybook
+
+# unit test at jest
+$ npm run test
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
