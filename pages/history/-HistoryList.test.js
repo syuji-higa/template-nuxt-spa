@@ -1,6 +1,6 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
-import HistoryList from '~/pages/history/-HistoryList.vue'
+import HistoryList from './-HistoryList.vue'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
@@ -8,6 +8,7 @@ localVue.use(Vuex)
 describe('HistoryList', () => {
   let store
   let wrapper
+
   beforeEach(() => {
     store = new Vuex.Store({
       state: {
@@ -16,13 +17,16 @@ describe('HistoryList', () => {
     })
     wrapper = shallowMount(HistoryList, { store, localVue })
   })
-  it('render component', () => {
-    expect(wrapper.exists()).toBe(true)
+
+  it('should be render component', () => {
+    expect(wrapper.exists()).toBeTruthy()
   })
-  it('visible component', () => {
-    expect(wrapper.isVisible()).toBe(true)
+
+  it('should be visible component', () => {
+    expect(wrapper.isVisible()).toBeTruthy()
   })
-  it('items', () => {
+
+  it('should be display "histories" value', () => {
     const $item = wrapper.findAll('.item')
     const { histories } = store.state
     for (let i = 0; i < histories.length; i++) {

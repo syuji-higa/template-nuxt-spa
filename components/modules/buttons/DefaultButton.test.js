@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import DefaultButton from '~/components/modules/buttons/DefaultButton.vue'
+import DefaultButton from './DefaultButton.vue'
 
 describe('DefaultButton', () => {
   const wrapper = shallowMount(DefaultButton, {
@@ -10,16 +10,20 @@ describe('DefaultButton', () => {
       isSelected: true
     }
   })
-  it('render component', () => {
-    expect(wrapper.exists()).toBe(true)
+
+  it('should be render component', () => {
+    expect(wrapper.exists()).toBeTruthy()
   })
-  it('visible component', () => {
-    expect(wrapper.isVisible()).toBe(true)
+
+  it('should be visible component', () => {
+    expect(wrapper.isVisible()).toBeTruthy()
   })
-  it('slot text', () => {
+
+  it('should be display "Test Button" text', () => {
     expect(wrapper.text()).toBe('Test Button')
   })
-  it('selected class', () => {
+
+  it('should be added "is-selected" class', () => {
     expect(wrapper.classes()).toContain('is-selected')
   })
 })

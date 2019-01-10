@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import SelectedItemName from '~/pages/select/-SelectedItemName.vue'
+import SelectedItemName from './-SelectedItemName.vue'
 
 describe('SelectedItemName', () => {
   const wrapper = shallowMount(SelectedItemName, {
@@ -10,16 +10,20 @@ describe('SelectedItemName', () => {
       isSelected: true
     }
   })
-  it('render component', () => {
-    expect(wrapper.exists()).toBe(true)
+
+  it('should be render component', () => {
+    expect(wrapper.exists()).toBeTruthy()
   })
-  it('visible component', () => {
-    expect(wrapper.isVisible()).toBe(true)
+
+  it('should be visible component', () => {
+    expect(wrapper.isVisible()).toBeTruthy()
   })
-  it('slot text', () => {
+
+  it('should be display "Test Name" text', () => {
     expect(wrapper.text()).toBe('Test Name')
   })
-  it('selected class', () => {
+
+  it('should be added "is-selected" class', () => {
     expect(wrapper.find('.item').classes()).toContain('is-selected')
   })
 })

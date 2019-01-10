@@ -1,5 +1,5 @@
 import { shallowMount, RouterLinkStub } from '@vue/test-utils'
-import DynamicList from '~/pages/dynamic/-DynamicList.vue'
+import DynamicList from './-DynamicList.vue'
 
 describe('DynamicList', () => {
   const wrapper = shallowMount(DynamicList, {
@@ -7,13 +7,16 @@ describe('DynamicList', () => {
       NuxtLink: RouterLinkStub
     }
   })
-  it('render component', () => {
-    expect(wrapper.exists()).toBe(true)
+
+  it('should be render component', () => {
+    expect(wrapper.exists()).toBeTruthy()
   })
-  it('visible component', () => {
-    expect(wrapper.isVisible()).toBe(true)
+
+  it('should be visible component', () => {
+    expect(wrapper.isVisible()).toBeTruthy()
   })
-  it('links', () => {
+
+  it('should be display "items" value', () => {
     const $a = wrapper.findAll('a')
     const items = wrapper.vm.items
     for (let i = 0; i < items.length; i++) {
