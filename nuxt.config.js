@@ -129,5 +129,9 @@ module.exports = {
         })
       }
     }
+  },
+
+  router: {
+    middleware: 'history'
   }
 }

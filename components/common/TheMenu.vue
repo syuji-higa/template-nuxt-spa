@@ -7,6 +7,8 @@
         nuxt-link(to="/select") Select
       li.item
         nuxt-link(to="/dynamic") Dynamic
+      li.item
+        nuxt-link(to="/history") History
 </template>
 
 <script>

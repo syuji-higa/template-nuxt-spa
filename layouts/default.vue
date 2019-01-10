@@ -25,6 +25,7 @@ export default {
   display flex
   justify-content center
   align-items center
+  padding 150px
   min-height 100vh
   text-align center
 

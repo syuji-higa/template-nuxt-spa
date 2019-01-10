@@ -18,5 +18,6 @@ describe('TheMenu', () => {
     expect($a.at(0).props().to).toBe('/')
     expect($a.at(1).props().to).toBe('/select')
     expect($a.at(2).props().to).toBe('/dynamic')
+    expect($a.at(3).props().to).toBe('/history')
   })
 })
