@@ -26,4 +26,10 @@ describe('DefaultButton', () => {
   it('should be added "is-selected" class', () => {
     expect(wrapper.classes()).toContain('is-selected')
   })
+
+  it('should be once emit "click" when once clicked', () => {
+    wrapper.trigger('click')
+    expect(wrapper.emitted().click).toBeTruthy()
+    expect(wrapper.emitted().click.length).toBe(1)
+  })
 })
