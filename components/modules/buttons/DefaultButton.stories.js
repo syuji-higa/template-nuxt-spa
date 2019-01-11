@@ -3,7 +3,7 @@ import { action } from '@storybook/addon-actions'
 import VueInfoAddon from 'storybook-addon-vue-info'
 import DefaultButton from './DefaultButton.vue'
 
-const sories = storiesOf('Modules Button', module)
+const sories = storiesOf('Modules Buttons', module)
 
 sories.addDecorator(VueInfoAddon).add('DefaultButton', () => {
   return {
