@@ -52,6 +52,7 @@
     "require-context.macro": "^1.0.4",
     "sanitize.css": "^8.0.0",
     "storybook-addon-vue-info": "^0.7.0",
+    "style-loader": "^0.23.1",
     "stylint": "^1.5.9",
     "stylint-stylish": "^2.0.0",
     "stylus": "^0.54.5",
