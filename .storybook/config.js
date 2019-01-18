@@ -9,7 +9,7 @@ import 'sanitize.css'
 Vue.component('nuxt-link', {
   props: {
     to: {
-      type: string,
+      type: String,
       default: ''
     }
   },
