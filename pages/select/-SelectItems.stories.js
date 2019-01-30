@@ -3,7 +3,7 @@ import { action } from '@storybook/addon-actions'
 import VueInfoAddon from 'storybook-addon-vue-info'
 import SelectItems from './-SelectItems.vue'
 
-const sories = storiesOf('Pages Select', module)
+const sories = storiesOf('Page Select', module)
 
 sories.addDecorator(VueInfoAddon).add('SelectItems', () => {
   return {

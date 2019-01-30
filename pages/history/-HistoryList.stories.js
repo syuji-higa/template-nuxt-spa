@@ -6,7 +6,7 @@ import HistoryList from './-HistoryList.vue'
 
 Vue.use(Vuex)
 
-const sories = storiesOf('Pages History', module)
+const sories = storiesOf('Page History', module)
 
 sories.addDecorator(VueInfoAddon).add('HistoryList', () => {
   return {
