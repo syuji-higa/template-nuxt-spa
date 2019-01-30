@@ -1,7 +1,7 @@
 <template lang="pug">
   button(
-    :class ="{ 'is-selected': isSelected }"
     class="button"
+    :class="{ 'is-selected': isSelected }"
     @click="onClick"
   )
     slot Button
