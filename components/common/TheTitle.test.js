@@ -8,11 +8,11 @@ describe('TheTitle', () => {
     }
   })
 
-  it('should be render component', () => {
+  it('should be rendered component', () => {
     expect(wrapper.exists()).toBeTruthy()
   })
 
-  it('should be visible component', () => {
+  it('should be the visible as component', () => {
     expect(wrapper.isVisible()).toBeTruthy()
   })
 })

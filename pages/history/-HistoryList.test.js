@@ -18,19 +18,19 @@ describe('HistoryList', () => {
     wrapper = shallowMount(HistoryList, { store, localVue })
   })
 
-  it('should be render component', () => {
+  it('should be rendered component', () => {
     expect(wrapper.exists()).toBeTruthy()
   })
 
-  it('should be visible component', () => {
+  it('should be the visible as component', () => {
     expect(wrapper.isVisible()).toBeTruthy()
   })
 
-  it('should be display "histories" value', () => {
-    const $item = wrapper.findAll('.item')
+  it('should be shown "histories" text at "item"', () => {
+    const item = wrapper.findAll('.item')
     const { histories } = store.state
     for (let i = 0; i < histories.length; i++) {
-      expect($item.at(i).text()).toBe(histories[i])
+      expect(item.at(i).text()).toBe(histories[i])
     }
   })
 })
