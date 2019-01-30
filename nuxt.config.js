@@ -1,3 +1,7 @@
+import dotenv from 'dotenv'
+
+dotenv.config()
+
 module.exports = {
   mode: 'spa',
 
@@ -129,6 +133,16 @@ module.exports = {
         })
       }
     }
+  },
+
+  /*
+  ** HTTP client
+  */
+  axios: {
+    baseURL:
+      process.env.API_URL ||
+      'https://virtserver.swaggerhub.com/syuji-higa/ScaffoldNuxtSPA/1.0.0',
+    responseType: 'json'
   },
 
   router: {
