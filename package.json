@@ -5,7 +5,7 @@
   "author": "syuji-higa",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "NUXT_HOST=0.0.0.0 nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "npm run lint && npm run test && nuxt generate",
