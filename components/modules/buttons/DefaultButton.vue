@@ -1,6 +1,5 @@
 <template lang="pug">
   button(
-    class="button"
     :class="{ 'is-selected': isSelected }"
     @click="onClick"
   )
@@ -25,7 +24,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.button
+button
   padding 10px 15px
   border 1px solid $main-color
   border-radius 6px
